@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./project3.css">
+</head>
+<body>
+    <div class="main-container">
+
+        <div class="container">
+    <textarea id="userinput" placeholder="input"></textarea><br>
+    <textarea id="output" placeholder="output"></textarea><br>
+
+   
+<div class="section">
+
+    <button onclick="wordCount()" >cound word</button>
+    <button onclick="spaceCount()" >space count</button>
+    <button onclick="spaceremove()" >space remove</button>
+    <button onclick="totalspaceremove()" > total space remove</button>
+
+    <button onclick="toUpercase()" >Upercase</button>
+    <button onclick="toLovercase()" >Lovercase</button>
+
+    <button onclick="charCount()">Character Count</button>
+    <button onclick="removeNewline()">removeNewline</button>
+    <button onclick="removeline()">removeline</button>
+
+
+<button onclick="reversText()">reverse</button>
+<button onclick="copyText()">Copy</button>
+    <button onclick="clearText()" >clear</button>
+
+</div>
+</div>
+</div>
+    <script>
+        let userstoreValue =" ";
+
+        document.getElementById("userinput").addEventListener("input",
+         function(e) {
+        userstoreValue = e.target.value;
+
+    // document.getElementById("output").innerText =   userstoreValue;
+    // console.log("Live Stored:", storedValue);
+  });
+
+
+
+  const charCount =()=>{
+    // let userstoreValue= document.getElementById("userinput").value;
+    document.getElementById("output").value= userstoreValue.length
+
+  }
+const wordCount=()=>{
+    let wordCounts= userstoreValue.replaceAll(" ", "");
+    let count= wordCounts.length;
+   document.getElementById("output").value= count;
+  
+
+};
+
+const spaceremove =() =>{
+    // let wordCounts= userstoreValue.replaceAll(" ", "");
+    // let wordCount  = userstoreValue.trim("", " ")
+    //  document.getElementById("output").innerHTML= wordCounts;
+
+
+    //   let userstoreValue = document.getElementById("userinput").value;
+  let cleaned = userstoreValue.replace(/\s+/g, ' ').trim();
+  document.getElementById("output").value = cleaned;
+}
+
+const totalspaceremove =() =>{
+    let wordCounts= userstoreValue.replaceAll(" ", "");
+    let wordCount  = userstoreValue.trim("", " ")
+     document.getElementById("output").value= wordCounts;
+
+
+    
+}
+
+const spaceCount=() =>{
+    let spaceCounts= (userstoreValue.match(/ /g) || []).length;
+   document.getElementById("output").value= spaceCounts;
+
+}
+
+const toUpercase = ( ) =>{
+    let Upercase = userstoreValue.toUpperCase();
+       document.getElementById("output").value= Upercase
+
+}
+const toLovercase = ( ) =>{
+    let Lovercase = userstoreValue.toLowerCase();
+       document.getElementById("output").value= Lovercase
+
+}
+
+const clearText = ( ) =>{
+   let clears = userstoreValue=" "
+       document.getElementById("output").value= clears
+   
+        document.getElementById("userinput").value= clears
+     
+
+  
+
+
+};
+const removeNewline=()=>{
+    let removeNewlines = userstoreValue.replace(/\n{1,}/g, '\n').trim();
+ document.getElementById("output").value= removeNewlines
+};
+
+const removeline=()=>{
+    let removelines = userstoreValue.replace(/\n+/g, '' );
+ document.getElementById("output").value= removelines
+};
+
+const reversText=() =>{
+    let revers = userstoreValue.split('').reverse().join('')
+     document.getElementById("output").value=revers
+};
+
+function copyText() {
+  let text = document.getElementById("userinput");
+  text.select();
+  document.execCommand("copy");
+  document.getElementById("output");
+}
+
+    </script>
+</body>
+</html>

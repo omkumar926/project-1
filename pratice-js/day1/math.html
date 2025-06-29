@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Math Methods Tasks</h2>
+    <ul>
+      <!-- <li>Generate a random number between 1 and 100.</li>
+      <li>Round a decimal number to the nearest integer.</li>
+      <li>Find the square root of a given number.</li> -->
+      <!-- <li>Get the absolute value of a negative number.</li> -->
+      <!-- <li>Find the maximum and minimum values from a set of numbers.</li> -->
+      <!-- <li>Calculate 2 raised to the power of 5.</li> -->
+      <!-- <li>Generate a random integer between 50 and 150.</li> -->
+      <!-- <li>Get the floor value of 9.7.</li> -->
+      <!-- <li>Get the ceiling value of 4.3.</li> -->
+      <!-- <li>Find the remainder when 25 is divided by 4.</li> -->
+    </ul>
+
+    <script>
+      //  <li>Generate a random number between 1 and 100.</li>
+     let a = Math.floor(Math.random() *100) + 1;
+
+   
+      // console.log(Math.random());
+      console.log(a);
+
+        //  <li>Round a decimal number to the nearest integer.</li>
+
+        let num = 7.6;
+let rounded = Math.round(num);
+console.log(rounded);  // Output: 8
+
+
+//  <li>Find the square root of a given number.</li>
+
+let b = 4;
+console.log(Math.pow(b,2));
+
+//  <li>Get the absolute value of a negative number.</li>
+
+let c= -10;
+let d = Math.abs(c);
+console.log(d)
+
+    //   <li>Find the maximum and minimum values from a set of numbers.</li>
+
+    let x = [10, 3, 6, 0, 9];
+    let z = Math.max(...x);
+    console.log(z);
+     console.log(Math.min(...x));
+
+
+
+      // <li>Calculate 2 raised to the power of 5.</li>
+
+      let y= 2;
+      console.log(Math.pow(y,5));
+
+      // <li>Generate a random integer between 50 and 150.</li>
+let t = Math.floor(Math.random() * 101) + 50;
+      // let t = Math.floor(Math.random() *101) + 50 ;
+      console.log(Math.round( t/2))
+      // console.log(t)
+
+
+      // <li>Get the floor value of 9.7.</li>
+let s = 9.7;
+console.log(Math.floor(s));
+
+      // <li>Get the ceiling value of 4.3.</li>
+let q = 4.3 ;
+console.log(Math.ceil(q))
+
+
+      // <li>Find the remainder when 25 is divided by 4.</li>
+
+      let u = 25/4;
+      console.log(Math.floor(u));
+
+          </script>
+  </body>
+</html>

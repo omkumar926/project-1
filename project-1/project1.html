@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const  login =() =>{
+            email= document.getElementById("e").value
+            password= document.getElementById("p").value
+document.getElementById("t").innerHTML=" "
+
+            if(email == "om@gmail.com" && password == "12345"){
+                location="https://www.google.com"
+            }else{
+                document.getElementById("t").innerHTML="invalide user "
+                // alert("invalide user")
+                   email= document.getElementById("e").value=""
+            password= document.getElementById("p").value=""
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>login from</legend>
+        email: <input type="email" id="e"><br>
+        password: <input type="password" id="p">
+<button onclick="login()" id="l">login</button>
+<p id="t"> </p>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h2>Array Methods Tasks</h2>
+    <div class="task-list">
+        
+        
+<!-- <div class="task">1. Create an array `numbers` with values `[5, 10, 15, 20]` and add `25` at the end.</div> -->
+        <!-- <div class="task">2. Remove the last element from the `numbers` array and display the updated array.</div> -->
+        <!-- <div class="task">3. Add `0` at the beginning of the `numbers` array.</div> -->
+        <!-- <div class="task">4. Remove the first element from the `numbers` array and display the updated array.</div> -->
+        <!-- <div class="task">5. Find the index of `15` in the `numbers` array.</div> -->
+        <!-- <div class="task">6. Extract `[200, 300]` from an array `[100, 200, 300, 400, 500]`.</div> -->
+        <!-- <div class="task">7. Remove the third element from `["Red", "Green", "Blue", "Yellow"]`.</div> -->
+        <!-- <div class="task">8. Convert `["JavaScript", "is", "awesome"]` into `"JavaScript is awesome"`.</div> -->
+        <!-- <div class="task">9. Reverse `[9, 8, 7, 6, 5]`.</div> -->
+        <!-- <div class="task">10. Sort `[9, 3, 7, 1, 5]` in ascending order.</div> -->
+        <!-- <div class="task">11. Merge `[1, 2, 3]` and `[4, 5, 6]`.</div> -->
+        <!-- <div class="task">12. Check if all elements in `[2, 4, 6, 8]` are even numbers.</div> -->
+        <!-- <div class="task">13. Check if any number in `[10, 20, 30, 5]` is greater than `25`.</div> -->
+        <!-- <div class="task">14. Replace middle elements with `0` in `[5, 10, 15, 20]`.</div> -->
+        <!-- <div class="task">15. Copy elements within `[1, 2, 3, 4, 5]`.</div> -->
+    </div>
+
+   <script>
+    // <div class="task">1. Create an array `numbers` with values `[5, 10, 15, 20]` and add `25` at the end.</div>
+let numbers = [5, 10, 15, 20];
+console.log(numbers.push(25));
+// console.log(numbers.indexOf(3))
+console.log(numbers);
+
+  // <div class="task">2. Remove the last element from the `numbers` array and display the updated array.</div>
+
+console.log(numbers.pop())
+console.log(numbers);
+
+//  <!-- <div class="task">3. Add `0` at the beginning of the `numbers` array.</div> -->
+
+console.log(numbers.unshift(0));
+console.log(numbers);
+
+
+//   <div class="task">4. Remove the first element from the `numbers` array and display the updated array.</div>
+console.log(numbers.shift(0));
+console.log(numbers);
+
+        // <div class="task">5. Find the index of `15` in the `numbers` array.</div>
+let number = [5,8,5,5,4,25,4,15,54,14,145,154,11154,151,54,1554,154,1454,154,154]
+// console.log(number.indexOf(15))
+let value = number[15]
+console.log(value);
+
+// <div class="task">6. Extract `[200, 300]` from an array `[100, 200, 300, 400, 500]`.</div>
+let array = [100, 200, 300, 400, 500];
+let values = array.slice(1,3);
+console.log(values);
+
+
+// <div class="task">7. Remove the third element from `["Red", "Green", "Blue", "Yellow"]`.</div>
+
+let frutes = ["Red", "Green", "Blue", "Yellow" , "balck" ];
+// console.log(frutes.length)
+frutes.splice(3, 1)
+// console.log(frutes.splice(3, 3))
+console.log(frutes)
+
+// <div class="task">8. Convert `["JavaScript", "is", "awesome"]` into `"JavaScript is awesome"`.</div>
+
+let arr = ["JavaScript", "is", "awesome"];
+let singlstring = arr.join(" ")
+console.log(singlstring)
+
+ // <div class="task">9. Reverse `[9, 8, 7, 6, 5]`.</div>
+
+let revers = [9, 8, 7, 6, 5];
+console.log(revers.reverse())
+
+
+//  <div class="task">10. Sort `[9, 3, 7, 1, 5]` in ascending order.</div>
+let ascending = [9, 3, 7, 1, 5];
+console.log(ascending.sort())
+
+        // <div class="task">11. Merge `[1, 2, 3]` and `[4, 5, 6]`.</div>
+
+let arr1 =[1, 2, 3];
+let Merge1 = [ 4, 5, 6];
+
+let singleMerge = arr1.concat(Merge1)
+console.log( singleMerge)
+
+
+        // <div class="task">12. Check if all elements in `[2, 4, 6, 8]` are even numbers.</div>
+
+let element = [2, 4, 6, 8]
+let value1 = element.every(n => n % 2 ===0)
+console.log( value1)
+
+        // <div class="task">13. Check if any number in `[10, 20, 30, 5]` is greater than `25`.</div>
+
+let greater = [10, 20, 30, 5];
+let value2 = greater.some( n=> n > 25);
+console.log(value2)
+
+        // <!-- <div class="task">14. Replace middle elements with `0` in `[5, 10, 15, 20]`.</div> -->
+let middle = [5, 10, 15, 20];
+console.log(middle.length)
+ middle[1] =0;
+ middle[2] = 0;
+ console.log ( middle)
+
+// <div class="task">15. Copy elements within `[1, 2, 3, 4, 5]`.</div>
+let Copy= [1, 2, 3, 4, 5]
+let value3 = Copy.concat(Copy);
+
+console.log(value3)
+
+// array.copyWithin(targetIndex, startIndex, endIndex);
+
+
+
+   </script>
+
+</body>
+</html>

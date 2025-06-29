@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+<link rel="stylesheet" href="./project2.css">
+  
+  </head>
+  <body>
+<div class="main-container">
+ 
+    <div class="container">
+     
+<textarea id="desplay"  ></textarea>
+
+ <div class="main-section">
+<div class="section1">
+<button class="number" onclick="number('1')">1</button>
+<button class="number" onclick="number('2')">2</button>
+<button class="number"onclick="number('3')">3</button>
+
+<br>
+<button class="number"onclick="number('4')">4</button>
+<button class="number"onclick="number('5')">5</button>
+<button class="number"onclick="number('6')">6</button>
+<br>
+<button class="number" onclick="number('7')">7</button>
+<button class="number" onclick="number('8')">8</button>
+<button class="number" onclick="number('9')">9</button>
+<br>
+<button class="number"onclick="number('0')">0</button>
+<button class="number"onclick="number('00')">00</button>
+</div>
+<!-- <br> -->
+ <div class="section2">
+<button class="operator" onclick="number('*')">*</button>
+<button class="operator"onclick="number('-')">-</button>
+
+<button class="operator"onclick="number('+')">+</button>
+<button class="operator" onclick="number('/')">/</button>
+</div>
+</div>
+<br>
+<div class="section3">
+<button class="result" onclick="allClear()">C</button>
+<button class="result" onclick="numberclear()">x</button>
+
+<button class="result" onclick="result()">=</button>
+</div>
+
+</div>
+</div>
+  <script>
+
+let input=''; 
+
+
+const number=(value)=>{
+  input += value;
+  document.getElementById("desplay").value = input;
+  // document.getElementById("desplay").innerHTML +=value;
+console.log(typeof input)
+};
+
+const result=()=>{
+  input = eval(input).toString();
+   
+document.getElementById("desplay").value=input;
+
+  console.log(typeof input)
+
+};
+
+
+
+const numberclear=()=>{
+  input= input.slice(0,-1)
+  document.getElementById("desplay").value=input ;
+};
+
+const allClear =()=>{
+  input=''
+  document.getElementById("desplay").value=""
+};
+// document.write(eval("23+4"))
+
+    </script>
+
+  </body>
+</html>
